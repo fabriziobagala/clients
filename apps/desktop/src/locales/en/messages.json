@@ -5270,10 +5270,10 @@
     "message": "Change account email"
   },
   "passkeyLogin": {
-    "message": "Log in with passkey?"
+    "message": "Log in with passkey"
   },
   "savePasskeyQuestion": {
-    "message": "Save passkey?"
+    "message": "Save passkey"
   },
   "saveNewPasskey": {
     "message": "Save as new login"
@@ -5285,7 +5285,7 @@
     "message": "No matching logins for this site"
   },
   "overwritePasskey": {
-    "message": "Overwrite passkey?"
+    "message": "Overwrite passkey"
   },
   "unableToSavePasskey": {
     "message": "Unable to save passkey"
