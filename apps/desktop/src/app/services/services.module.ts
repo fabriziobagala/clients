@@ -58,6 +58,7 @@ import { TokenService } from "@bitwarden/common/auth/abstractions/token.service"
 import { WebAuthnLoginPrfKeyServiceAbstraction } from "@bitwarden/common/auth/abstractions/webauthn/webauthn-login-prf-key.service.abstraction";
 import { PendingAuthRequestsStateService } from "@bitwarden/common/auth/services/auth-request-answering/pending-auth-requests.state";
 import { AutofillSettingsServiceAbstraction } from "@bitwarden/common/autofill/services/autofill-settings.service";
+import { DomainSettingsService } from "@bitwarden/common/autofill/services/domain-settings.service";
 import { BillingAccountProfileStateService } from "@bitwarden/common/billing/abstractions";
 import { ClientType, DeviceType } from "@bitwarden/common/enums";
 import { ProcessReloadServiceAbstraction } from "@bitwarden/common/key-management/abstractions/process-reload.service";
@@ -473,6 +474,7 @@ const safeProviders: SafeProvider[] = [
       DesktopSettingsService,
       DesktopFido2UserVerificationService,
       PasswordRepromptService,
+      DomainSettingsService,
     ],
   }),
   safeProvider({
