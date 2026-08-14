@@ -16,6 +16,7 @@ import { CipherRepromptType, CipherType } from "@bitwarden/common/vault/enums";
 import { CipherView } from "@bitwarden/common/vault/models/view/cipher.view";
 import { FolderView } from "@bitwarden/common/vault/models/view/folder.view";
 import { RestrictedItemTypesService } from "@bitwarden/common/vault/services/restricted-item-types.service";
+import { DialogService } from "@bitwarden/components";
 import { I18nPipe } from "@bitwarden/ui-common";
 import { CipherRowMenuHandlers, CipherRowMenuService } from "@bitwarden/vault";
 
@@ -106,6 +107,7 @@ describe("VaultNextComponent", () => {
       imports: [VaultNextComponent],
       providers: [
         { provide: AccountService, useValue: accountService },
+        { provide: DialogService, useValue: mock<DialogService>() },
         { provide: CipherRowMenuService, useValue: cipherRowMenuService },
         { provide: CipherService, useValue: cipherService },
         { provide: CollectionService, useValue: collectionService },

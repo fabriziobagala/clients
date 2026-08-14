@@ -13,6 +13,17 @@
 >
   <button
     slot="toolbar"
+    id="vault-next_button_import"
+    type="button"
+    bitButton
+    startIcon="bwi-arrow-down"
+    buttonType="secondary"
+    (click)="openImportDialog()"
+  >
+    {{ "importNoun" | i18n }}
+  </button>
+  <button
+    slot="toolbar"
     id="vault-next_button_add-item"
     type="button"
     bitButton

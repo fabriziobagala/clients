@@ -14,7 +14,7 @@ import {
   CipherViewLikeUtils,
 } from "@bitwarden/common/vault/utils/cipher-view-like-utils";
 import { filterOutNullish } from "@bitwarden/common/vault/utils/observable-utilities";
-import { ButtonModule } from "@bitwarden/components";
+import { ButtonModule, DialogService } from "@bitwarden/components";
 import { I18nPipe, safeProvider } from "@bitwarden/ui-common";
 import {
   CipherRowMenuHandlers,
@@ -26,6 +26,7 @@ import {
 } from "@bitwarden/vault";
 
 import { HeaderModule } from "../../layouts/header/header.module";
+import { ImportDialogComponent } from "../../tools/import/import-dialog.component";
 import { WebVaultItemActionsService } from "../services/vault-item-actions.service";
 
 /**
@@ -58,6 +59,7 @@ import { WebVaultItemActionsService } from "../services/vault-item-actions.servi
 })
 export class VaultNextComponent {
   private readonly accountService = inject(AccountService);
+  private readonly dialogService = inject(DialogService);
   private readonly cipherRowMenuService = inject(CipherRowMenuService);
   private readonly cipherService = inject(CipherService);
   private readonly collectionService = inject(CollectionService);
@@ -139,5 +141,9 @@ export class VaultNextComponent {
 
   protected async addItem(): Promise<void> {
     await this.itemActions.add();
+  }
+
+  protected openImportDialog(): void {
+    ImportDialogComponent.open(this.dialogService);
   }
 }
