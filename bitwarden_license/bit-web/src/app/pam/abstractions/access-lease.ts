@@ -1,0 +1,15 @@
+export type {
+  AccessApprover,
+  AccessDecider,
+  AccessDecisionVerdict,
+  AccessLeaseExtensionRequest,
+  AccessLeaseId,
+  AccessLeaseRevokeRequest,
+  AccessLeaseStatus,
+  AccessLeaseView,
+  AccessRequestDecisionView,
+  AccessRequestId,
+  AccessRequestStatus,
+  AccessRequestView,
+  LeasingError,
+} from "@bitwarden/sdk-internal";
